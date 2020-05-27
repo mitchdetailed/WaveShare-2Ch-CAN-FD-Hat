@@ -68,8 +68,8 @@ we'll want to add these commands to the file just above exit 0.
 
 ```sh
 #can0 and can1
-sudo ip link set up can0 type can bitrate 500000 restart-ms 1000
-sudo ip link set up can1 type can bitrate 500000 restart-ms 1000
+sudo ip link set up can0 type can bitrate 500000 restart-ms 100
+sudo ip link set up can1 type can bitrate 500000 restart-ms 100
 sudo ifconfig can0 txqueuelen 65535
 sudo ifconfig can1 txqueuelen 65535
 
