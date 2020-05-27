@@ -92,7 +92,7 @@ $ sudo apt update
 $ sudo apt full-upgrade
 ```
 
-To update all capable pip packages https://python-can.readthedocs.io/en/master/: 
+To update all capable pip packages : 
 ```sh
 $ pip3 list --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U 
 ```
