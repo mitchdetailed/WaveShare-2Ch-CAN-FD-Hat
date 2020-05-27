@@ -5,8 +5,6 @@ Instructions For WaveShare 2ch CAN-FD Hat Installation
 Work In Progress, check back soon for updates...
 
 
-## Cloning Repository
-```
-git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git
-```
+## Cloning Repository and Installation
+Clone Repository : `git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git`
 
