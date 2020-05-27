@@ -10,11 +10,11 @@ Clone Repository :
 `git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git`
 
 Go into the directory and install the BCM2835 Library : 
-`cd ./WaveShare-2Ch-CAN-FD-Hat/bcm2835-1.60/`
-`sudo ./configure`
-`sudo make`
-`sudo make check`
-`sudo make install`
+```cd ./WaveShare-2Ch-CAN-FD-Hat/bcm2835-1.60/
+sudo ./configure
+sudo make
+sudo make check
+sudo make install```
 
 Install WiringPi Library : 
 `sudo apt-get install wiringpi`
