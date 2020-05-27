@@ -51,6 +51,7 @@ $ ./install.sh
 go grab a drink, this will take about 15 minutes before you can reboot.
 
 **Checking configuration and more setup**
+
 You can check that the drivers were installed correctly by typing the command below..
 ```sh
 dmesg | grep spi
