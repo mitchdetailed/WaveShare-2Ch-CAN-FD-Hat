@@ -1,0 +1,79 @@
+/*
+ * Device tree overlay for mcp2517fd/can0 on spi0.0
+ */
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2835", "brcm,bcm2836", "brcm,bcm2708", "brcm,bcm2709";
+
+    /* disable spi-dev for spi0 and spi1 */
+    fragment@0 {
+	target = <&spidev0>;
+	__overlay__ {
+            status = "disabled";
+	};
+    };
+ 
+    fragment@1 {
+        target = <&spidev1>;
+        __overlay__ {
+            status = "disabled";
+        };
+    };
+
+    /* MCP2517FD INT pins */
+    fragment@2 {
+        target = <&gpio>;
+        __overlay__ {
+
+            mcp2517fd_int_pins: mcp2517fd_int_pins {
+                brcm,pins = <25 16>;
+                brcm,function = <0>; /* input */
+            };
+        };
+    };
+
+    /* dedicated MCP2517FD clock @40MHz */
+    fragment@3 {
+        target-path = "/clocks";
+        __overlay__ {
+            mcp2517fd_osc: mcp2517fd_osc {
+                compatible = "fixed-clock";
+                #clock-cells = <0>;
+                clock-frequency  = <40000000>;
+            };
+        };
+    };
+
+    /* CAN1: SPI0 CE0, INT pin on GPIO25 */
+    /* CAN2: SPI0 CE1, INT pin on GPIO16 */
+    fragment@4 {
+        target = <&spi0>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+            status = "okay";
+
+            can0: can@0 {
+		compatible = "microchip,mcp2517fd";
+		reg = <0>;
+                clocks = <&mcp2517fd_osc>;
+		spi-max-frequency = <125000000>;
+		interrupt-parent = <&gpio>;
+		interrupts = <25 0x8>;
+            };
+            can1: can@1 {
+		compatible = "microchip,mcp2517fd";
+		reg = <1>;
+                clocks = <&mcp2517fd_osc>;
+		spi-max-frequency = <125000000>;
+		interrupt-parent = <&gpio>;
+		interrupts = <16 0x8>;
+            };
+        };
+    };
+
+
+};
