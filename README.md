@@ -56,6 +56,7 @@ You can check that the drivers were installed correctly by typing the command be
 dmesg | grep spi
 ```
 It should say ": MCP2517 successfully initialized." on both lines.
+![](Images/grepspiAmode.png)
 
 ## Setup on startup
 We can set up the interfaces with a specific bitrate on startup if desired, to do so..
@@ -81,7 +82,8 @@ sudo ip link set vcan1 mtu 72
 sudo ip link set vcan1 up
 ```
 change the bitrate to whatever your bitrate needed is.. 
-##INSERT IMAGE HERE OF RC.LOCAL#
+
+![](Images/rclocal.png)
 
 
 **Extra : update all pip3 packages and distro**
