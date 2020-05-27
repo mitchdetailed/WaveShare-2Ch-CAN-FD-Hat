@@ -7,8 +7,8 @@ Work In Progress, check back soon for updates...
 
 ## Cloning Repository and Dependency Installation
 Clone Repository :
-
-```git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git
+```
+git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git
 ```
 
 Go into the directory and install the BCM2835 Library : 
