@@ -25,7 +25,7 @@ $ sudo make install
 $ sudo apt-get install wiringpi
 $ cd /tmp
 $ wget https://project-downloads.drogon.net/wiringpi-latest.deb
-$ sudo dpkg -i wiringpi-latest.deb`
+$ sudo dpkg -i wiringpi-latest.deb
 $ gpio -v
 ```
 
@@ -45,7 +45,7 @@ $ cd
 $ cd ./WaveShare-2Ch-CAN-FD-Hat/WaveShare/Raspberry\ Pi/Linux\ driver
 $ sudo chmod -R 777 A\ mode/
 $ cd A\ mode/
-$ ./install.sh
+$ sudo ./install.sh
 ```
 
 go grab a drink, this will take about 15 minutes before you can reboot.
