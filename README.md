@@ -13,6 +13,7 @@ $ git clone https://github.com/mitchdetailed/WaveShare-2Ch-CAN-FD-Hat.git
 
 **Go into the directory and install the BCM2835 Library** 
 ```sh
+$ sudo apt-get install automake
 $ cd ./WaveShare-2Ch-CAN-FD-Hat/bcm2835-1.60/
 $ sudo ./configure
 $ sudo make
